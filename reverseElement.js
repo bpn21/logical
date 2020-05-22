@@ -21,4 +21,5 @@ function reverse(string) {
 }
 var joined = arr.join(' ');
 var reverse = reverse(joined);
-console.log(reverse.split(' '));
+var newArr = reverse.split(' ')
+console.log(newArr);
