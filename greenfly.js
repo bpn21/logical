@@ -36,7 +36,7 @@ for (i = 15; i <= 21; i++) {
     child[i] =
         day[i] = {
             mature: mature[i] = day[i - 1].mature + day[i - 7].child - day[i - 8].child,
-            child: child[i] = day[i - 7].child * 8 + day[i - 1].child + 8
+            child: child[i] = (day[i - 7].child + day[6].mature) * 8 + day[i - 1].child
         }
     console.log("day ", i, " ", "mature", day[i].mature, "child", day[i].child)
     console.log("Total = ", day[i].mature + day[i].child)
@@ -45,7 +45,7 @@ for (i = 15; i <= 21; i++) {
 for (i = 22; i <= 28; i++) {
     child[i] =
         day[i] = {
-            mature: mature[i] = day[i - 1].mature + day[i - 7].child - day[i - 8].child ,
+            mature: mature[i] = day[i - 1].mature + day[i - 7].child - day[i - 8].child,
             child: child[i] = day[i - 7].child * 8 + day[i - 1].child
         }
     console.log("day ", i, " ", "mature", day[i].mature, "child", day[i].child)
